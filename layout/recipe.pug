@@ -1,0 +1,36 @@
+html
+	head
+		style
+			include recipe.css
+	body
+		div(id="recipe-box")
+			span(id="recipe-title")=reciTitle
+			div(id="info-box")
+				div(id="basic-info")
+					div 
+						| Category: 
+						b= reciCategory
+					div 
+						| Prep Time:
+						b #{reciPTime} min
+					div 
+						|Cooking Time: 
+						b #{reciCTime} min
+					div 
+						|Total Time: 
+						b #{reciTTime} min
+				div(id="long-info")
+					div 
+						| Ingredients: 
+						ul
+							each val in reciIngredients
+								li= val
+					div 
+						| Directions:
+						ol
+							each val in reciDirections
+								li= val
+		button
+			a(href="/") See all recipes 
+
+

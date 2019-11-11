@@ -1,0 +1,39 @@
+#recipe-box{
+	border: solid;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	/*center the div*/
+	margin: 0 auto;
+}
+
+#recipe-title{
+	text-align: center;
+	font-size: 50px;
+	color: brown;
+}
+
+#info-box{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 10px;
+}
+
+#basic-info{
+	display: flex;
+	flex-direction: column;
+	width: 35%
+
+}
+
+#basic-info > div {
+	margin-left: 10px;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+#long-info > div{
+	font-size: 18px;
+}
+

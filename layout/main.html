@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<form action="/create-recipe" method="post" id="form-container">
+			<div>
+				Title:
+				<input type="text" name="title">
+			</div>
+			<div>
+				Category:
+				<input type="text" name="category">
+			</div>
+			<div>
+				PrepTime:
+				<input type="number" name="prep-time" placeholder="in minutes">				
+			</div>
+			<div>
+				CookingTime:
+				<input type="number" name="cooking-time" placeholder="in minutes">
+			</div>
+			<div id="ingredients-input">
+				Ingredients:<br>
+				<input type="text" name="ingredients">
+				<input type="text" name="ingredients">
+				<input type="text" name="ingredients">
+				<input type="text" name="ingredients">
+			</div>
+			<button type="button" onclick="addInputField('ingredients-input')">More Ing</button>
+			<div id="directions-input">
+				Directions:<br>
+				<input type="text" name="directions">
+				<input type="text" name="directions">
+				<input type="text" name="directions">
+				<input type="text" name="directions">
+			</div>
+			<button type="button" onclick="addInputField('directions-input')">More Dir</button>
+
+			<input id="form-submit" type="submit" value="Create Recipe">
+		</form>
+
+		<div id="main-box">
+		</div>
+	</body>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", getAllRecipes);
+	</script>
+</html>
